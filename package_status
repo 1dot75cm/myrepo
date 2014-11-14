@@ -1,4 +1,4 @@
-# Generation date: Fri Nov 14 01:02:31 CST 2014
+# Generation date: Sat Nov 15 00:25:54 CST 2014
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
 ->  pidgin-lwqq 		20141106     20141106     normal
@@ -6,7 +6,7 @@
  `- pidgin-sendscreenshot 	20140724     20140724     normal
 ->  pidgin-openfetion 		google                    custom
  `- libofetion 			google                    custom
-->  wiznote-beta 		20141112     20141113     update
+->  wiznote-beta 		20141114     20141114     normal
 ->  sogou-pinyin 		20140819     20140819     normal
  `- sogou-pinyin-skins 		google                    custom
 ->  fcitx 			20141105     20141105     normal
@@ -26,7 +26,7 @@
  `- gflags 			20140717     20140717     normal
 ->  fcitx-libpinyin 		20141107     20141107     normal
 ->  fcitx-sunpinyin 		20131031     20131031     normal
- |- sunpinyin 			20141109     20141109     normal
+ |- sunpinyin 			20141109     20141114     update
  `- open-gram 			google                    custom
 ->  openyoudao 			20141113     20141113     normal
  `- pywebkitgtk 		google                    custom
@@ -38,16 +38,16 @@
 ->  deepin-music-player 	20141104     20141104     normal
 ->  osdlyrics 			20141101     20141101     normal
 ->  pointdownload 		20141106     20141106     normal
-->  mvgather 			20141112     20141112     normal (fc22 failed)
+->  mvgather 			20141112     20141112     normal
  |- fcitx-qt5 			20141022     20141022     normal
- `- qtav 			20141112     20141112     normal (fc22 failed)
+ `- qtav 			20141114     20141114     normal
 ->  deepin-translator 		20141104     20141104     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
  |- deepin-qml-widgets 		20141112     20141112     normal
  `- deepin-menu 		20141028     20141028     normal
 ->  deepin-screenshot 		20141104     20141104     normal
-->  xware-desktop 		20141113     20141113     normal (fc21, fc22 failed)
+->  xware-desktop 		20141113     20141113     normal
 ->  bcloud 			20141111     20141111     normal
 ->  screenfetch 		20141112     20141112     normal
 ->  musicbox 			20140827     20140827     normal
