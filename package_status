@@ -1,4 +1,4 @@
-# Generation date: Wed Nov 19 18:01:46 CST 2014
+# Generation date: Sat Nov 22 22:42:41 CST 2014
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
 ->  pidgin-lwqq 		20141106     20141106     normal
@@ -6,7 +6,7 @@
  `- pidgin-sendscreenshot 	20140724     20140724     normal
 ->  pidgin-openfetion 		google                    custom
  `- libofetion 			google                    custom
-->  wiznote-beta 		20141119     20141119     normal
+->  wiznote-beta 		20141120     20141120     normal
 ->  sogou-pinyin 		20140819     20140819     normal
  `- sogou-pinyin-skins 		google                    custom
 ->  fcitx 			20141105     20141105     normal
@@ -18,8 +18,8 @@
  |- fcitx-googlepinyin 		20140204     20140204     normal
  `- libgooglepinyin 		google                    custom
 ->  fcitx-rime 			20140204     20140204     normal
- |- brise 			20141015     20141015     normal
- |- librime 			20141103     20141103     normal
+ |- brise 			20141119     20141119     normal
+ |- librime 			20141119     20141119     normal
  |- opencc 			20141108     20141108     normal
  |- yaml-cpp 			google                    custom
  |- glog 			google                    custom
@@ -40,7 +40,7 @@
 ->  pointdownload 		20141106     20141106     normal
 ->  mvgather 			20141112     20141112     normal
  |- fcitx-qt5 			20141022     20141022     normal
- `- qtav 			20141118     20141119     update
+ `- qtav 			20141118     20141122     update
 ->  deepin-translator 		20141104     20141104     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
@@ -58,6 +58,6 @@
 ->  kwplayer 			20141118     20141118     normal
  |- python-mutagen 		20141110     20141110     normal
  |- python3-xlib 		20141113     20141113     normal
- `- python3-keybinder 		20141113     20141113     normal
+ `- python3-keybinder 		20141113     20141120     update
 Total: 58 rpms
-Updateing: 1 rpms
+Updateing: 2 rpms
