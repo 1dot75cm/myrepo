@@ -1,4 +1,4 @@
-# Generation date: Sat Nov 22 22:42:41 CST 2014
+# Generation date: Mon Nov 24 00:14:47 CST 2014
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
 ->  pidgin-lwqq 		20141106     20141106     normal
@@ -40,7 +40,7 @@
 ->  pointdownload 		20141106     20141106     normal
 ->  mvgather 			20141112     20141112     normal
  |- fcitx-qt5 			20141022     20141022     normal
- `- qtav 			20141118     20141122     update
+ `- qtav 			20141118     20141123     update
 ->  deepin-translator 		20141104     20141104     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
@@ -59,5 +59,6 @@
  |- python-mutagen 		20141110     20141110     normal
  |- python3-xlib 		20141113     20141113     normal
  `- python3-keybinder 		20141113     20141120     update
-Total: 58 rpms
-Updateing: 2 rpms
+->  simplescreenrecorder 	20140926     20141030     update
+Total: 59 rpms
+Updateing: 3 rpms
