@@ -1,4 +1,4 @@
-# Generation date: Thu Nov 27 16:58:39 CST 2014
+# Generation date: Fri Nov 28 19:13:49 CST 2014
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
 ->  pidgin-lwqq 		20141106     20141106     normal
@@ -9,7 +9,7 @@
 ->  wiznote-beta 		20141127     20141127     normal
 ->  sogou-pinyin 		20140819     20140819     normal
  `- sogou-pinyin-skins 		google                    custom
-->  fcitx 			20141105     20141105     normal
+->  fcitx 			20141105     20141127     update
  |- fcitx-configtool 		20140714     20140714     normal
  |- kcm-fcitx 			20140912     20140912     normal
  |- fcitx-ui-light 		20120305     20120305     normal
@@ -20,7 +20,7 @@
 ->  fcitx-rime 			20140204     20140204     normal
  |- brise 			20141119     20141119     normal
  |- librime 			20141119     20141119     normal
- |- opencc 			20141108     20141108     normal
+ |- opencc 			20141108     20141127     update
  |- yaml-cpp 			google                    custom
  |- glog 			google                    custom
  `- gflags 			20140717     20140717     normal
@@ -38,17 +38,17 @@
 ->  deepin-music-player 	20141127     20141127     normal
 ->  osdlyrics 			20141101     20141101     normal
 ->  pointdownload 		20141106     20141106     normal
-->  mvgather 			20141112     20141112     normal
+->  mvgather 			20141128     20141128     normal
  |- fcitx-qt5 			20141022     20141022     normal
- `- qtav 			20141125     20141126     update
+ `- qtav 			20141128     20141128     normal
 ->  deepin-translator 		20141104     20141104     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
- |- deepin-qml-widgets 		20141117     20141127     update
+ |- deepin-qml-widgets 		20141117     20141128     update
  `- deepin-menu 		20141113     20141124     update
 ->  deepin-screenshot 		20141104     20141104     normal
 ->  xware-desktop 		20141115     20141115     normal
-->  bcloud 			20141126     20141126     normal
+->  bcloud 			20141127     20141127     normal
 ->  screenfetch 		20141112     20141112     normal
 ->  musicbox 			20140827     20140827     normal
 ->  moonplayer 			20141126     20141126     normal
@@ -61,4 +61,4 @@
  `- python3-keybinder 		20141120     20141120     normal
 ->  simplescreenrecorder 	20141124     20141124     normal
 Total: 59 rpms
-Updateing: 3 rpms
+Updateing: 4 rpms
