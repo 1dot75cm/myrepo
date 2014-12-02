@@ -1,12 +1,12 @@
-# Generation date: Tue Dec  2 02:06:38 CST 2014
+# Generation date: Wed Dec  3 02:22:53 CST 2014
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
-->  pidgin-lwqq 		20141106     20141106     normal
- |- lwqq 			20140916     20140916     normal
+->  pidgin-lwqq 		20141202     20141202     normal
+ |- lwqq 			20141202     20141202     normal
  `- pidgin-sendscreenshot 	20140724     20140724     normal
 ->  pidgin-openfetion 		google                    custom
  `- libofetion 			google                    custom
-->  wiznote-beta 		20141127     20141127     normal
+->  wiznote-beta 		20141202     20141202     normal
 ->  sogou-pinyin 		20140819     20140819     normal
  `- sogou-pinyin-skins 		google                    custom
 ->  fcitx 			20141105     20141127     update
@@ -39,13 +39,13 @@
 ->  osdlyrics 			20141101     20141101     normal
 ->  pointdownload 		20141128     20141128     normal
 ->  mvgather 			20141129     20141129     normal
- |- fcitx-qt5 			20141022     20141022     normal
- `- qtav 			20141201     20141201     normal
+ |- fcitx-qt5 			20141201     20141201     normal
+ `- qtav 			20141202     20141202     normal
 ->  deepin-translator 		20141104     20141104     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
- |- deepin-qml-widgets 		20141201     20141201     normal
- `- deepin-menu 		20141124     20141124     normal
+ |- deepin-qml-widgets 		20141202     20141202     normal
+ `- deepin-menu 		20141202     20141202     normal
 ->  deepin-screenshot 		20141104     20141104     normal
 ->  xware-desktop 		20141115     20141115     normal
 ->  bcloud 			20141128     20141128     normal
@@ -55,11 +55,12 @@
 ->  gouyong 			20140922     20140922     normal
 ->  doubanfm-qt 		20140611     20140611     normal
 ->  douban.fm 			20141108     20141108     normal
-->  kwplayer 			20141118     20141130     update
+->  kwplayer 			20141130     20141130     normal
  |- python-mutagen 		20141128     20141128     normal
  |- python3-xlib 		20141113     20141113     normal
- `- python3-keybinder 		20141120     20141120     normal
+ |- python3-keybinder 		20141120     20141120     normal
+ `- python-html2text 		20141101     20141101     normal
 ->  simplescreenrecorder 	20141130     20141130     normal
 ->  guake 			20141124     20141124     normal
-Total: 60 rpms
-Updateing: 5 rpms
+Total: 61 rpms
+Updateing: 4 rpms
