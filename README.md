@@ -1,3 +1,9 @@
+# News
+- 2015.01.08 托管至 gitcafe
+    由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响.
+
+***
+
 # Introduction
 这是我的 fedora 个人软件源 - **[myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/)**, 目前包含以下源:
 - **[myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/)** : 此源支持 fedora 19/20/21/rawhide, rhel 7. 包含一些不错的第三方软件, 如 搜狗输入法, bcloud, point, 深度音乐等;
