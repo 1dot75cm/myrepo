@@ -1,6 +1,6 @@
 # News
 - 2015.01.08 托管至 gitcafe   
-    由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响.
+    由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响. (el7 源已转存百度云: http://pan.baidu.com/s/1gdvhQ6Z)
 
 ***
 
