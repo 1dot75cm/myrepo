@@ -1,4 +1,4 @@
-# Generation date: Sat Dec 13 00:23:42 CST 2014
+# Generation date: Fri Jan  9 12:34:11 CST 2015
     Name 			RPM version  Git version  Status
     ---- 			-----------  -----------  ------
 ->  pidgin-lwqq 		20141202     20141202     normal
@@ -6,22 +6,22 @@
  `- pidgin-sendscreenshot 	20140724     20140724     normal
 ->  pidgin-openfetion 		google                    custom
  `- libofetion 			google                    custom
-->  wiznote-beta 		20141205     20141205     normal
+->  wiznote-beta 		20150106     20150108     update
 ->  sogou-pinyin 		20140819     20140819     normal
  `- sogou-pinyin-skins 		google                    custom
-->  fcitx 			20141127     20141209     update
- |- fcitx-configtool 		20140714     20141209     update
- |- kcm-fcitx 			20140912     20141209     update
+->  fcitx 			20141209     20141209     normal
+ |- fcitx-configtool 		20141209     20141209     normal
+ |- kcm-fcitx 			20141209     20141209     normal
  |- fcitx-ui-light 		20120305     20120305     normal
  |- fcitx-fbterm 		20121218     20121218     normal
  |- fcitx-cloudpinyin 		20140606     20140606     normal
  |- fcitx-googlepinyin 		20140204     20140204     normal
  `- libgooglepinyin 		google                    custom
-->  ibus-rime 			20140902     20140902     normal
-->  fcitx-rime 			20140204     20141209     update
- |- brise 			20141204     20141204     normal
- |- librime 			20141205     20141211     update
- |- opencc 			20141127     20141212     update
+->  ibus-rime 			20141214     20141214     normal
+->  fcitx-rime 			20141209     20141209     normal
+ |- brise 			20141225     20141225     normal
+ |- librime 			20150106     20150106     normal
+ |- opencc 			20141212     20150106     update
  |- yaml-cpp 			google                    custom
  |- glog 			google                    custom
  `- gflags 			20140717     20140717     normal
@@ -37,33 +37,33 @@
  `- deepin-gsettings 		20131016     20131016     normal
 ->  dmusic-plugin-baidumusic 	20140318     20140318     normal
  `- pyjavascriptcore 		20130723     20130723     normal
-->  deepin-music-player 	20141127     20141209     update
+->  deepin-music-player 	20141231     20141231     normal
 ->  osdlyrics 			20141101     20141101     normal
-->  pointdownload 		20141204     20141209     update
-->  mvgather 			20141129     20141129     normal
- |- fcitx-qt5 			20141201     20141208     update
- `- qtav 			20141207     20141212     update
-->  deepin-translator 		20141104     20141211     update
+->  pointdownload 		20150105     20150105     normal
+->  mvgather 			20150105     20150105     normal
+ |- fcitx-qt5 			20141201     20150101     update
+ `- qtav 			20150106     20150109     update
+->  deepin-translator 		20141231     20141231     normal
  |- python-pyocr 		20140926     20140926     normal
  |- python-tesseract 		google                    custom
- |- deepin-qml-widgets 		20141205     20141212     update
+ |- deepin-qml-widgets 		20141231     20141231     normal
  `- deepin-menu 		20141202     20141202     normal
-->  deepin-screenshot 		20141104     20141212     update
-->  xware-desktop 		20141212     20141212     normal
-->  bcloud 			20141206     20141206     normal
+->  deepin-screenshot 		20141231     20141231     normal
+->  xware-desktop 		20141229     20141229     normal
+->  bcloud 			20150106     20150107     update
 ->  screenfetch 		20141211     20141211     normal
-->  musicbox 			20141201     20141201     normal
-->  moonplayer 			20141126     20141126     normal
-->  gouyong 			20140922     20140922     normal
+->  musicbox 			20150103     20150107     update
+->  moonplayer 			20141226     20141226     normal
+->  gouyong 			20140922     20150102     update
 ->  doubanfm-qt 		20140611     20140611     normal
-->  douban.fm 			20141108     20141205     update
-->  kwplayer 			20141209     20141209     normal
+->  douban.fm 			20141108     20141228     update
+->  kwplayer 			20150105     20150105     normal
  |- python-mutagen 		20141128     20141128     normal
  |- python3-xlib 		20141113     20141113     normal
  |- python3-keybinder 		20141120     20141120     normal
- `- python-html2text 		20141205     20141205     normal
-->  simplescreenrecorder 	20141204     20141204     normal
-->  guake 			20141124     20141124     normal
+ `- python-html2text 		20141229     20141229     normal
+->  simplescreenrecorder 	20150104     20150107     update
+->  guake 			20150105     20150107     update
 ->  tragtor 			20140722     20140722     normal
 Total: 64 rpms
-Updateing: 15 rpms
+Updateing: 11 rpms
