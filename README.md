@@ -1,4 +1,10 @@
 # News
+项目:
+- **[myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/)** - 包含开源软件
+- **[myrepo for fc21-x86_64](https://gitcafe.com/sensor/myrepo)** - 包含搜狗等闭源软件
+- **[myrepo for el7 百度分享](http://pan.baidu.com/s/1gdvhQ6Z)**
+- **[google chrome 镜像源](https://gitcafe.com/sensor/repos)**
+
 - 2015.01.08 托管至 gitcafe   
     由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响. (el7 源已转存百度云: http://pan.baidu.com/s/1gdvhQ6Z)
 
@@ -15,7 +21,7 @@
 
 ## Introduction myrepo repository
 
-**Fedora 19/20/21/rawhide Include:** pidgin-sendscreenshot, pidgin-openfetion, pidgin-lwqq, lwqq, libofetion, wiznote, sogou-pinyin, sogou-pinyin-skins, libgooglepinyin, fcitx-googlepinyin, fcitx-rime, openyoudao, deepin-utils, deepin-gsettings, deepin-ui, pyjavascriptcore, deepin-music-player, dmusic-plugin-baidumusic, osdlyrics, pointdownload, mvgather, fcitx-qt5, libqtav, deepin-screenshot, deepin-translator, python-tesseract, python-pyocr, deepin-qml-widgets, deepin-menu, chrpath, xware-desktop, bcloud, screenfetch, musicbox, moonplayer, gouyong, doubanfm-qt, douban.fm, kwplayer, python-mutagen, python3-xlib, python3-keybinder, python3-cairo, pygobject+patch, simplescreenrecorder, guake, python-html2text, ibus-rime, opera-stable, tragtor, opera-beta, opera-developer, xorg-x11-drv-nvidia-340xx, nvidia-340xx-kmod, google-chrome-release...   
+**Fedora 19/20/21/rawhide Include:** pidgin-sendscreenshot, pidgin-openfetion, pidgin-lwqq, lwqq, libofetion, wiznote, sogou-pinyin, sogou-pinyin-skins, libgooglepinyin, fcitx-googlepinyin, fcitx-rime, openyoudao, deepin-utils, deepin-gsettings, deepin-ui, pyjavascriptcore, deepin-music-player, dmusic-plugin-baidumusic, osdlyrics, pointdownload, mvgather, fcitx-qt5, libqtav, deepin-screenshot, deepin-translator, python-tesseract, python-pyocr, deepin-qml-widgets, deepin-menu, chrpath, xware-desktop, bcloud, screenfetch, musicbox, moonplayer, gouyong, doubanfm-qt, douban.fm, kwplayer, python-mutagen, python3-xlib, python3-keybinder, python3-cairo, pygobject+patch, simplescreenrecorder, guake, python-html2text, ibus-rime, opera-stable, tragtor, opera-beta, opera-developer, xorg-x11-drv-nvidia-340xx, nvidia-340xx-kmod, google-chrome-release, hoststool, grub4dos...   
 
 **RHEL/CentOS 7 Include(included above list):** pidgin, fcitx, fcitx-configtool, kcm-fcitx, fcitx-ui-light, fcitx-fbterm, fcitx-cloudpinyin, gflags, glog, yaml-cpp, librime, brise, fcitx-libpinyin, sunpinyin, fcitx-sunpinyin, pywebkitgtk, python-keybinder, python-pyquery, python-restkit, python-socketpool, python-http-parser, libmpd-devel, xmms2-devel, Pyrex, ecore-devel, eet-devel, libeina-devel, evas-devel, tslib-devel, libmodplug-devel, libdbusmenu-gtk2-devel, libindicator, libappindicator, python-enum34, python-inotify, zbar-pygtk, python-xpyb, tesseract-langpack, python-cssselect, python-lxml, Cython, pygobject3, python3-cairo, python-urllib3, python-tornado, python-mock, python-nose, python-coverage, python-six, pytest, python-py, python-crypto, python-keyring, dbus-python, rtmpdump, faac, xvidcore, libdc1394, lame, libmp4v2, opencore-amr, vo-amrwbenc, python3-ply, python3-plyvel...   
 
@@ -60,6 +66,8 @@
 - google-chrome-release - 为 chrome rpm 做镜像源   
 - akmod-nvidia-340xx - 自动编译 nvidia 显卡驱动内核模块   
 - kmod-nvidia-340xx - 预编译 nvidia 显卡驱动内核模块    
+- hoststool - 更新并管理 hosts 文件的工具   
+- grub4dos - 由无忧论坛的 chenall, 不点, bean 维护的多功能启动引导管理器   
 未完待续...   
 
 **Package status list:** [click here](https://raw.githubusercontent.com/1dot75cm/myrepo/master/package_status).
@@ -425,9 +433,26 @@ lwqq 配置请参考[用户手册][]。其中包括：配置 lwqq 与 GNOME3 集
 
     参考：[Howto/nVidia][29-1]、[X Config Options][29-2]、[kmod 与 akmod][29-3]
 
+## 30) Install [hoststool][] - 安装 hoststool
+- 测试系统：fc21√
+- huhamhire-hosts 是一款跨平台(win, linux, osx) hosts 文件更新管理工具，可在一定程度上防止 DNS 污染，加快域名解析速度。Fedora / RHEL 7 使用以下命令安装：   
+  `# yum install hoststool`   
+
+    参考：[huhamhire 主页][30-1]、[huhamhire-hosts github][30-2]
+
+## 31) Install [Grub4dos][] - 安装 Grub4dos
+- 测试系统：fc21√
+- Grub4dos 是 GNU GRUB 的分支，由无忧论坛的 不点 在 2003 年发起。目前主要由 chenall, 不点, bean 等人维护。Fedora / RHEL 7 使用以下命令安装：   
+  `# yum install grub4dos`   
+
+    参考：[Grub4dos wiki][31-1]、[Grub4dos GoogleCode][31-2]、[Grub4dos 下载][31-3]、[grub4dos 手册][31-4]
+
 ***
 
 ## Changelog
+- 2015.01.08 01:00 CST - fc21 源托管至 gitcafe   
+    \- 由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响. (el7 源已转存百度云: http://pan.baidu.com/s/1gdvhQ6Z)
+
 - 2014.12.31 03:00 CST - 添加软件包    
     \- fedora 源：  
         `google-chrome-release`
@@ -642,3 +667,11 @@ lwqq 配置请参考[用户手册][]。其中包括：配置 lwqq 与 GNOME3 集
 [29-1]:http://rpmfusion.org/Howto/nVidia "How to install nVidia driver"
 [29-2]:ftp://download.nvidia.com/XFree86/Linux-x86/340.65/README/xconfigoptions.html "X Config Options"
 [29-3]:http://blog.robotshell.org/2011/fedora-kmod-and-akmod/ "kmod 与 akmod"
+[hoststool]:https://hosts.huhamhire.com/wp-content/uploads/2013/07/Linux-GUI.png "截图"
+[30-1]:https://hosts.huhamhire.com "huhamhire 主页"
+[30-2]:https://github.com/huhamhire/huhamhire-hosts "huhamhire-hosts Github"
+[Grub4dos]:http://upload.wikimedia.org/wikipedia/commons/f/f6/Grub4dos.png "截图"
+[31-1]:http://zh.wikipedia.org/wiki/Grub4Dos "维基百科"
+[31-2]:https://code.google.com/p/grub4dos-chenall "grub4dos GoogleCode"
+[31-3]:http://grub4dos.chenall.net "grub4dos 下载"
+[31-4]:https://code.google.com/p/grub4dos-help-doc "grub4dos 手册"
