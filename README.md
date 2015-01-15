@@ -1,9 +1,9 @@
 # News
 项目:
-- **[myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/)** - 包含开源软件
-- **[myrepo for fc21-x86_64](https://gitcafe.com/sensor/myrepo)** - 包含搜狗等闭源软件
-- **[myrepo for el7 百度分享](http://pan.baidu.com/s/1gdvhQ6Z)**
-- **[google chrome 镜像源](https://gitcafe.com/sensor/repos)**
+**[myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/)** - 包含开源软件，
+**[myrepo for fc21-x86_64](https://gitcafe.com/sensor/myrepo)** - 包含搜狗等闭源软件，
+**[myrepo for el7 百度分享](http://pan.baidu.com/s/1gdvhQ6Z)**，
+**[google chrome 镜像源](https://gitcafe.com/sensor/repos)**。
 
 - 2015.01.08 托管至 gitcafe   
     由于 Copr 源包含个别私有软件包, 本源将接受审查并删除部分软件包. myrepo 源 fedora 21 x86_64 的全部软件包都已托管至 https://gitcafe.com/sensor/myrepo , 请移步添加此源. fedora 其他版本以及 centos 7 源将删除私有软件, 已有的开源软件不受影响. (el7 源已转存百度云: http://pan.baidu.com/s/1gdvhQ6Z)
@@ -444,6 +444,7 @@ lwqq 配置请参考[用户手册][]。其中包括：配置 lwqq 与 GNOME3 集
 - 测试系统：fc21√
 - Grub4dos 是 GNU GRUB 的分支，由无忧论坛的 不点 在 2003 年发起。目前主要由 chenall, 不点, bean 等人维护。Fedora / RHEL 7 使用以下命令安装：   
   `# yum install grub4dos`   
+  `# bootlace [参数] 设备/文件`  # 写入 grub4dos，详细参数请查看手册 (/usr/share/doc/grub4dos/)
 
     参考：[Grub4dos wiki][31-1]、[Grub4dos GoogleCode][31-2]、[Grub4dos 下载][31-3]、[grub4dos 手册][31-4]
 
