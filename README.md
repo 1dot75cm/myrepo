@@ -21,7 +21,7 @@
 
 ## Introduction myrepo repository
 
-**Fedora 19/20/21/rawhide Include:** pidgin-sendscreenshot, pidgin-openfetion, pidgin-lwqq, lwqq, libofetion, wiznote, sogou-pinyin, sogou-pinyin-skins, libgooglepinyin, fcitx-googlepinyin, fcitx-rime, openyoudao, deepin-utils, deepin-gsettings, deepin-ui, pyjavascriptcore, deepin-music-player, dmusic-plugin-baidumusic, osdlyrics, pointdownload, mvgather, fcitx-qt5, libqtav, deepin-screenshot, deepin-translator, python-tesseract, python-pyocr, deepin-qml-widgets, deepin-menu, chrpath, xware-desktop, bcloud, screenfetch, musicbox, moonplayer, gouyong, doubanfm-qt, douban.fm, kwplayer, python-mutagen, python3-xlib, python3-keybinder, python3-cairo, pygobject+patch, simplescreenrecorder, guake, python-html2text, ibus-rime, opera-stable, tragtor, opera-beta, opera-developer, xorg-x11-drv-nvidia-340xx, nvidia-340xx-kmod, google-chrome-release, hoststool, grub4dos...   
+**Fedora 19/20/21/rawhide Include:** pidgin-sendscreenshot, pidgin-openfetion, pidgin-lwqq, lwqq, libofetion, wiznote, sogou-pinyin, sogou-pinyin-skins, libgooglepinyin, fcitx-googlepinyin, fcitx-rime, openyoudao, deepin-utils, deepin-gsettings, deepin-ui, pyjavascriptcore, deepin-music-player, dmusic-plugin-baidumusic, osdlyrics, pointdownload, mvgather, fcitx-qt5, libqtav, deepin-screenshot, deepin-translator, python-tesseract, python-pyocr, deepin-qml-widgets, deepin-menu, chrpath, xware-desktop, bcloud, screenfetch, musicbox, moonplayer, gouyong, doubanfm-qt, douban.fm, kwplayer, python-mutagen, python3-xlib, python3-keybinder, python3-cairo, pygobject+patch, simplescreenrecorder, guake, python-html2text, ibus-rime, opera-stable, tragtor, opera-beta, opera-developer, xorg-x11-drv-nvidia-340xx, nvidia-340xx-kmod, google-chrome-release, hoststool, grub4dos, mu...   
 
 **RHEL/CentOS 7 Include(included above list):** pidgin, fcitx, fcitx-configtool, kcm-fcitx, fcitx-ui-light, fcitx-fbterm, fcitx-cloudpinyin, gflags, glog, yaml-cpp, librime, brise, fcitx-libpinyin, sunpinyin, fcitx-sunpinyin, pywebkitgtk, python-keybinder, python-pyquery, python-restkit, python-socketpool, python-http-parser, libmpd-devel, xmms2-devel, Pyrex, ecore-devel, eet-devel, libeina-devel, evas-devel, tslib-devel, libmodplug-devel, libdbusmenu-gtk2-devel, libindicator, libappindicator, python-enum34, python-inotify, zbar-pygtk, python-xpyb, tesseract-langpack, python-cssselect, python-lxml, Cython, pygobject3, python3-cairo, python-urllib3, python-tornado, python-mock, python-nose, python-coverage, python-six, pytest, python-py, python-crypto, python-keyring, dbus-python, rtmpdump, faac, xvidcore, libdc1394, lame, libmp4v2, opencore-amr, vo-amrwbenc, python3-ply, python3-plyvel...   
 
@@ -68,6 +68,7 @@
 - kmod-nvidia-340xx - 预编译 nvidia 显卡驱动内核模块    
 - hoststool - 更新并管理 hosts 文件的工具   
 - grub4dos - 由无忧论坛的 chenall, 不点, bean 维护的多功能启动引导管理器   
+- mu - 为音乐而生的播放器   
 未完待续...   
 
 **Package status list:** [click here](https://raw.githubusercontent.com/1dot75cm/myrepo/master/package_status).
@@ -448,6 +449,13 @@ lwqq 配置请参考[用户手册][]。其中包括：配置 lwqq 与 GNOME3 集
 
     参考：[Grub4dos wiki][31-1]、[Grub4dos GoogleCode][31-2]、[Grub4dos 下载][31-3]、[grub4dos 手册][31-4]
 
+## 32) Install [μ][] - 安装 μ 音乐播放器
+- 测试系统：fc21√
+- μ 是一款跨平台媒体管理器。基于 Qt5 开发，支持播放绝大部分音频格式，支持导入 m3u, ttpl, wpl, xspf 和 iTunes xml 格式的播放列表，支持自动下载歌词。Fedora / RHEL 7 使用以下命令安装：   
+  `# yum install mu`   
+
+    参考：[μ Github][32-1]、[μ Gitosc][32-2]
+
 ***
 
 ## Changelog
@@ -676,3 +684,6 @@ lwqq 配置请参考[用户手册][]。其中包括：配置 lwqq 与 GNOME3 集
 [31-2]:https://code.google.com/p/grub4dos-chenall "grub4dos GoogleCode"
 [31-3]:http://grub4dos.chenall.net "grub4dos 下载"
 [31-4]:https://code.google.com/p/grub4dos-help-doc "grub4dos 手册"
+[μ]:http://kreogist.github.io/Mu "μ website"
+[32-1]:https://github.com/Kreogist/Mu "μ Github"
+[32-2]:http://git.oschina.net/Miyanaga/Mu "μ Gitosc"
