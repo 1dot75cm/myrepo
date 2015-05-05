@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.16git20150215
+Version:	2.1.18git20150430
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Summary(zh_CN):	为知笔记 Qt 客户端
@@ -51,6 +51,17 @@ This is a development version.
 %setup -q
 
 %build
+# GCC version
+gcc_version=$((LANG=c;gcc --version)|awk 'gsub(/\./,""){print $3;exit}')
+if [ $gcc_version -ge '490' ]; then
+#issue 307: https://github.com/WizTeam/WizQTClient/issues/307
+sed -i '1a#define CRYPTOPP_DISABLE_SSE2' lib/cryptopp/config.h
+fi
+
+%if 0%{?rhel} == 6
+sed -i '/QT_VERSION/s|504|540|g' src/wizCategoryViewItem.cpp
+%endif
+
 # change library path
 %ifarch x86_64
 sed -i 's|lib/wiznote/plugins|lib64/%{name}/plugins|' \
@@ -149,6 +160,9 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Mon May 04 2015 mosquito <sensor.wen@gmail.com> - 2.1.18git20150430-1
+- Update version to 2.1.18git20150430
+- Fixed issue 307: https://github.com/WizTeam/WizQTClient/issues/307
 * Wed Mar 04 2015 mosquito <sensor.wen@gmail.com> - 2.1.16git20150215-1
 - Update version to 2.1.16git20150215
 * Tue Feb 03 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150203-1
