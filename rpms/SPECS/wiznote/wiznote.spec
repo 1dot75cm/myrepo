@@ -3,12 +3,14 @@
 # cmake version
 %if 0%{?fedora} >= 19 || 0%{?rhel} >= 7
    %define _cmake cmake
-%else if 0%{?rhel} = 6
+%else
+ %if 0%{?rhel} == 6
    %define _cmake cmake28
+ %endif
 %endif
 
 Name:		wiznote
-Version:	2.1.13git20140926
+Version:	2.1.14git20141119
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Group:		Applications/Editors
@@ -23,8 +25,10 @@ BuildRequires:	boost-devel
 BuildRequires:	zlib-devel
 %if 0%{?fedora} >= 19 || 0%{?rhel} >= 7
 BuildRequires:	cmake >= 2.8.4
-%else if 0%{?rhel} = 6
+%else
+ %if 0%{?rhel} == 6
 BuildRequires:	cmake28 >= 2.8.4
+ %endif
 %endif
 Obsoletes:	wiz-note <= 2.1.13git20140926
 
@@ -34,7 +38,18 @@ Obsoletes:	wiz-note <= 2.1.13git20140926
 
 %description
 WizNote is an opensource cross-platform cloud based note-taking client.
-This is a development version.
+This is a release version.
+.
+Support following platforms:
+1. windows xp/vista/7/8
+2. Mac OSX
+3. Linux
+3. Android/IOs
+4. Web
+.
+Please refer to WizNote home for more detailed info:
+- http://www.wiznote.com
+- http://www.wiz.cn
 
 %prep
 %setup -q
@@ -53,7 +68,12 @@ sed -i 's@lib/wiznote/plugins@lib64/%{name}/plugins@' \
 
 mkdir dist
 pushd dist
+# fixed "/usr/lib64/lib64/libboost_date_time.a" but this file does not exist.
+# BOOL Boost_NO_BOOST_CMAKE "Enable fix for FindBoost.cmake"
 %{_cmake} .. \
+%if 0%{?rhel} == 6
+	-DBoost_NO_BOOST_CMAKE=ON \
+%endif
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DBUILD_STATIC_LIBRARIES=ON \
 	-DCLUCENE_BUILD_SHARED_LIBRARIES=ON \
@@ -99,6 +119,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Thu Nov 20 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141119-1
+- Branch (v2.1.14) code has been frozen.
 * Fri Oct 17 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140926-2
 - Modify the package name, consistent with debian
 - Adjust the library path
