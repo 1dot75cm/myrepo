@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.15git20150203
+Version:	2.1.16git20150215
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Summary(zh_CN):	为知笔记 Qt 客户端
@@ -53,28 +53,31 @@ This is a development version.
 %build
 # change library path
 %ifarch x86_64
-sed -i 's@lib/wiznote/plugins@lib64/%{name}/plugins@' \
+sed -i 's|lib/wiznote/plugins|lib64/%{name}/plugins|' \
 	src/main.cpp \
 	src/plugins/coreplugin/CMakeLists.txt \
 	src/plugins/helloworld/CMakeLists.txt \
 	src/plugins/markdown/CMakeLists.txt \
 	lib/aggregation/CMakeLists.txt \
-	lib/extensionsystem/CMakeLists.txt
+	lib/extensionsystem/CMakeLists.txt \
+	CMakeLists.txt
 %else
-sed -i 's@lib/wiznote/plugins@lib/%{name}/plugins@' \
+sed -i 's|lib/wiznote/plugins|lib/%{name}/plugins|' \
 	src/main.cpp \
 	src/plugins/coreplugin/CMakeLists.txt \
 	src/plugins/helloworld/CMakeLists.txt \
 	src/plugins/markdown/CMakeLists.txt \
 	lib/aggregation/CMakeLists.txt \
-	lib/extensionsystem/CMakeLists.txt
+	lib/extensionsystem/CMakeLists.txt \
+	CMakeLists.txt
 %endif
 
 # change share path
-sed -i 's@share/wiznote@share/%{name}@' \
+sed -i 's|share/wiznote|share/%{name}|' \
 	src/utils/pathresolve.cpp \
 	src/main.cpp \
-	src/CMakeLists.txt
+	src/CMakeLists.txt \
+	src/plugins/markdown/markdown.cpp
 
 mkdir dist
 pushd dist
@@ -106,10 +109,10 @@ mv %{buildroot}%{_datadir}/applications/wiznote.desktop \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 # change desktop
-sed -i -e 's@Name=WizNote@Name=WizNote Develop@' \
-       -e '/Name\[zh\_*/s@为知笔记@为知笔记开发版@' \
-       -e 's@Exec=WizNote@Exec=%{name}@' \
-       -e 's@Icon=wiznote@Icon=%{name}@' \
+sed -i -e 's|Name=WizNote|Name=WizNote Develop|' \
+       -e '/Name\[zh\_*/s|为知笔记|为知笔记开发版|' \
+       -e 's|Exec=WizNote|Exec=%{name}|' \
+       -e 's|Icon=wiznote|Icon=%{name}|' \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 # change icon filename
@@ -146,6 +149,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Wed Mar 04 2015 mosquito <sensor.wen@gmail.com> - 2.1.16git20150215-1
+- Update version to 2.1.16git20150215
 * Tue Feb 03 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150203-1
 - Update version to 2.1.15git20150203
 * Thu Jan 29 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150127-1

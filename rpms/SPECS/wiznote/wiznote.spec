@@ -10,9 +10,10 @@
 %endif
 
 Name:		wiznote
-Version:	2.1.14git20141119
+Version:	2.1.15git20150215
 Release:	1%{?dist}
 Summary:	WizNote QT Client
+Summary(zh_CN):	为知笔记 Qt 客户端
 Group:		Applications/Editors
 License:	GPLv3
 URL:		https://github.com/WizTeam/WizQTClient
@@ -51,19 +52,24 @@ Please refer to WizNote home for more detailed info:
 - http://www.wiznote.com
 - http://www.wiz.cn
 
+%description -l zh_CN
+为知笔记是一款基于云技术的开源跨平台笔记软件.
+此包为稳定版.
+
 %prep
 %setup -q
 
 %build
 # change library path
 %ifarch x86_64
-sed -i 's@lib/wiznote/plugins@lib64/%{name}/plugins@' \
+sed -i 's|lib/wiznote/plugins|lib64/%{name}/plugins|' \
 	src/main.cpp \
 	src/plugins/coreplugin/CMakeLists.txt \
 	src/plugins/helloworld/CMakeLists.txt \
 	src/plugins/markdown/CMakeLists.txt \
 	lib/aggregation/CMakeLists.txt \
-	lib/extensionsystem/CMakeLists.txt
+	lib/extensionsystem/CMakeLists.txt \
+	CMakeLists.txt
 %endif
 
 mkdir dist
@@ -94,7 +100,7 @@ popd
 mv %{buildroot}%{_bindir}/WizNote %{buildroot}%{_bindir}/%{name}
 
 # change desktop
-sed -i 's@Exec=WizNote@Exec=%{name}@' \
+sed -i 's|Exec=WizNote|Exec=%{name}|' \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 # export library path
@@ -119,6 +125,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Wed Mar 04 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150215-1
+- Update version to 2.1.15git20150215
 * Thu Nov 20 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141119-1
 - Branch (v2.1.14) code has been frozen.
 * Fri Oct 17 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140926-2
