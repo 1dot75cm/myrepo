@@ -9,7 +9,7 @@
 
 Name:		wiz-note
 Version:	2.1.13git20140923
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	WizNote QT Client
 Group:		Applications/Editors
 License:	GPLv3
@@ -21,7 +21,7 @@ BuildRequires:	qt5-qttools-devel
 BuildRequires:	qt5-qtwebkit-devel
 BuildRequires:	boost-devel
 BuildRequires:	zlib-devel
-%if 0%{?fedora} >= 19
+%if 0%{?fedora} >= 19 || 0%{?rhel} >= 7
 BuildRequires:	cmake >= 2.8.4
 %else if 0%{?rhel} = 6
 BuildRequires:	cmake28 >= 2.8.4
@@ -66,10 +66,12 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #%exclude %{_datadir}/licenses/
 
 %changelog
-* Tue Sep 23 2014 mosquito <sensor.wen@gmail.com>
+* Tue Sep 23 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140923-2
+- Change script
+* Tue Sep 23 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140923-1
 - update version 2.1.13git20140923
 - Changelog see: https://github.com/WizTeam/WizQTClient/commits/v2.1.13
-* Thu Sep 11 2014 mosquito <sensor.wen@gmail.com>
+* Thu Sep 11 2014 mosquito <sensor.wen@gmail.com> - 2.1.13-1
 - update version 2.1.13
 * Wed Sep 10 2014 i@marguerite.su
 - update version 2.1.12
