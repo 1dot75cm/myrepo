@@ -1,0 +1,10 @@
+--- wiznote-beta-2.1.14git20141015.orig/src/wizDocumentWebView.cpp	2014-10-16 03:06:54.762979425 +0800
++++ wiznote-beta-2.1.14git20141015/src/wizDocumentWebView.cpp	2014-10-16 03:07:33.512060924 +0800
+@@ -23,7 +23,6 @@
+ #include <QWebElement>
+ #include <QUndoStack>
+ #include <QDesktopServices>
+-#include <QMacPasteboardMime>
+ 
+ #include <coreplugin/icore.h>
+ 
