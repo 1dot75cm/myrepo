@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.14git20141114
+Version:	2.1.14git20141118
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Group:		Applications/Editors
@@ -133,6 +133,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Tue Nov 18 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141118-1
+- Update version 2.1.14git20141118
 * Fri Nov 14 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141114-1
 - Update version 2.1.14git20141114
 * Wed Nov 12 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141112-1
