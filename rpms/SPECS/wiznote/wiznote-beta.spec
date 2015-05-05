@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.15git20150115
+Version:	2.1.15git20150116
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Summary(zh_CN):	为知笔记 Qt 客户端
@@ -119,8 +119,8 @@ for i in `ls %{buildroot}%{_datadir}/icons/hicolor/`; do
 done
 
 # export library path
-#install -d %{buildroot}/etc/ld.so.conf.d/
-#echo "%{_libdir}/%{name}/plugins/" > %{buildroot}/etc/ld.so.conf.d/%{name}.conf
+#install -d @{buildroot}/etc/ld.so.conf.d/
+#echo "@{_libdir}/@{name}/plugins/" > @{buildroot}/etc/ld.so.conf.d/@{name}.conf
 
 cat > %{buildroot}%{_bindir}/%{name} << EOF
 #!/bin/bash
@@ -137,7 +137,7 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 %files
 %defattr(-,root,root,-)
 %doc LICENSE README.md CHANGELOG.md
-#%{_sysconfdir}/ld.so.conf.d/%{name}.conf
+#@{_sysconfdir}/ld.so.conf.d/@{name}.conf
 %{_libdir}/%{name}/plugins/*
 %{_bindir}/%{name}*
 %{_datadir}/applications/%{name}.desktop
@@ -146,6 +146,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Sun Jan 18 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150116-1
+- Update version to 2.1.15git20150116
 * Thu Jan 15 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150115-1
 - Update version to 2.1.15git20150115
 * Mon Jan 12 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150109-1
