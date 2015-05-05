@@ -1,0 +1,18 @@
+--- wiznote-beta-2.1.15git20141230.orig/src/wizDocumentWebView.cpp	2014-12-30 23:09:43.171111687 +0800
++++ wiznote-beta-2.1.15git20141230/src/wizDocumentWebView.cpp	2014-12-30 23:10:35.002194792 +0800
+@@ -120,6 +120,7 @@
+     QClipboard* clip = QApplication::clipboard();
+     Q_ASSERT(clip);
+ 
++/*
+     const QMimeData* mime = clip->mimeData();
+ //    QStringList formats = mime->formats();
+ //    for(int i = 0; i < formats.size(); ++ i) {
+@@ -146,6 +147,7 @@
+             return;
+         }
+     }
++*/
+ 
+     if (!clip->image().isNull()) {
+         // save clipboard image to $TMPDIR

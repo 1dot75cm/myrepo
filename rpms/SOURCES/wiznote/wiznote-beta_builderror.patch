@@ -1,0 +1,54 @@
+--- wiznote-beta-2.1.15git20141222.orig/src/wizDocumentWebView.cpp	2014-12-23 04:16:12.195951840 +0800
++++ wiznote-beta-2.1.15git20141222/src/wizDocumentWebView.cpp	2014-12-23 04:19:11.635824313 +0800
+@@ -1303,32 +1303,32 @@
+     QClipboard* clip = QApplication::clipboard();
+     Q_ASSERT(clip);
+ 
+-//    const QMimeData* mime = clip->mimeData();
+-//    QStringList formats = mime->formats();
+-//    for(int i = 0; i < formats.size(); ++ i) {
+-//        qDebug() << "Mime Format: " << formats.at(i) << " Mime data: " << mime->data(formats.at(i));
+-//    }
+-//    if (mime->hasHtml())
+-//    {
+-//        QString strText = mime->text();
+-//        if (strText.isEmpty())
+-//            WizHtml2Text(mime->html(), strText);
+-//        QMimeData* data = new QMimeData();
+-//        data->removeFormat("text/html");
+-//        data->setText(strText);
+-//        clip->setMimeData(data);
+-//    }
+-
+-    QString strText = wizSystemClipboardData();
+-    qDebug() << "clipboard data from cocoa : " << strText;
+-    if (!strText.isEmpty())
++    const QMimeData* mime = clip->mimeData();
++    QStringList formats = mime->formats();
++    for(int i = 0; i < formats.size(); ++ i) {
++        qDebug() << "Mime Format: " << formats.at(i) << " Mime data: " << mime->data(formats.at(i));
++    }
++    if (mime->hasHtml())
+     {
++        QString strText = mime->text();
++        if (strText.isEmpty())
++            WizHtml2Text(mime->html(), strText);
+         QMimeData* data = new QMimeData();
+         data->removeFormat("text/html");
+         data->setText(strText);
+         clip->setMimeData(data);
+     }
+ 
++//    QString strText = wizSystemClipboardData();
++//    qDebug() << "clipboard data from cocoa : " << strText;
++//    if (!strText.isEmpty())
++//    {
++//        QMimeData* data = new QMimeData();
++//        data->removeFormat("text/html");
++//        data->setText(strText);
++//        clip->setMimeData(data);
++//    }
++
+     triggerPageAction(QWebPage::Paste);
+ }
+ 
