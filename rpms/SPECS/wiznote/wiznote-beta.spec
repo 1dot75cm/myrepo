@@ -10,13 +10,17 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.14git20141205
+Version:	2.1.15git20141222
 Release:	1%{?dist}
 Summary:	WizNote QT Client
+Summary(zh_CN):	为知笔记 Qt 客户端
+
 Group:		Applications/Editors
 License:	GPLv3
 URL:		https://github.com/WizTeam/WizQTClient
 Source:		%{name}-%{version}.tar.xz
+Patch0:		wiznote-beta_builderror.patch
+
 BuildRequires:	gcc-c++
 BuildRequires:	qt5-qtbase-devel
 BuildRequires:	qt5-qttools-devel
@@ -40,8 +44,13 @@ Obsoletes:	wiz-note <= 2.1.13git20140926
 WizNote is an opensource cross-platform cloud based note-taking client.
 This is a development version.
 
+%description -l zh_CN
+为知笔记是一款基于云技术的开源跨平台笔记软件.
+此包为开发版.
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # change library path
@@ -94,7 +103,7 @@ make install DESTDIR=%{buildroot}
 popd
 
 # change exec filename
-mv %{buildroot}%{_bindir}/WizNote %{buildroot}%{_bindir}/%{name}
+mv %{buildroot}%{_bindir}/WizNote %{buildroot}%{_bindir}/%{name}-run
 mv %{buildroot}%{_datadir}/applications/wiznote.desktop \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
@@ -112,8 +121,14 @@ for i in `ls %{buildroot}%{_datadir}/icons/hicolor/`; do
 done
 
 # export library path
-install -d %{buildroot}/etc/ld.so.conf.d/
-echo "%{_libdir}/%{name}/plugins/" > %{buildroot}/etc/ld.so.conf.d/%{name}.conf
+#install -d %{buildroot}/etc/ld.so.conf.d/
+#echo "%{_libdir}/%{name}/plugins/" > %{buildroot}/etc/ld.so.conf.d/%{name}.conf
+
+cat > %{buildroot}%{_bindir}/%{name} << EOF
+#!/bin/bash
+LD_LIBRARY_PATH=%{_libdir}/%{name}/plugins %{name}-run
+EOF
+chmod 0755 %{buildroot}%{_bindir}/%{name}
 
 rm -rf %{buildroot}%{_datadir}/licenses/
 rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
@@ -124,15 +139,17 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 %files
 %defattr(-,root,root,-)
 %doc LICENSE README.md CHANGELOG.md
-%{_sysconfdir}/ld.so.conf.d/%{name}.conf
+#%{_sysconfdir}/ld.so.conf.d/%{name}.conf
 %{_libdir}/%{name}/plugins/*
-%{_bindir}/%{name}
+%{_bindir}/%{name}*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/%{name}/*
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Tue Dec 23 2014 mosquito <sensor.wen@gmail.com> - 2.1.15git20141222-1
+- Update version to 2.1.15git20141222
 * Mon Dec 08 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141205-1
 - Update version to 2.1.14git20141205
 * Wed Dec 03 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141202-1
