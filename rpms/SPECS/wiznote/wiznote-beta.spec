@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.15git20150127
+Version:	2.1.15git20150203
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Summary(zh_CN):	为知笔记 Qt 客户端
@@ -146,6 +146,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Tue Feb 03 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150203-1
+- Update version to 2.1.15git20150203
 * Thu Jan 29 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150127-1
 - Update version to 2.1.15git20150127
 * Mon Jan 26 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150126-1
