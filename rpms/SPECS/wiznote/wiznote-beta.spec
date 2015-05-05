@@ -3,19 +3,20 @@
 # cmake version
 %if 0%{?fedora} >= 19 || 0%{?rhel} >= 7
    %define _cmake cmake
-%else if 0%{?rhel} = 6
+%else
+ %if 0%{?rhel} == 6
    %define _cmake cmake28
+ %endif
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.14git20141105
+Version:	2.1.14git20141110
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Group:		Applications/Editors
 License:	GPLv3
 URL:		https://github.com/WizTeam/WizQTClient
 Source:		%{name}-%{version}.tar.xz
-Patch0:		fix_build_error.patch
 BuildRequires:	gcc-c++
 BuildRequires:	qt5-qtbase-devel
 BuildRequires:	qt5-qttools-devel
@@ -24,8 +25,10 @@ BuildRequires:	boost-devel
 BuildRequires:	zlib-devel
 %if 0%{?fedora} >= 19 || 0%{?rhel} >= 7
 BuildRequires:	cmake >= 2.8.4
-%else if 0%{?rhel} = 6
+%else
+ %if 0%{?rhel} == 6
 BuildRequires:	cmake28 >= 2.8.4
+ %endif
 %endif
 Obsoletes:	wiz-note <= 2.1.13git20140926
 
@@ -39,7 +42,6 @@ This is a development version.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 # change library path
@@ -69,7 +71,12 @@ sed -i 's@share/wiznote@share/%{name}@' \
 
 mkdir dist
 pushd dist
+# fixed "/usr/lib64/lib64/libboost_date_time.a" but this file does not exist.
+# BOOL Boost_NO_BOOST_CMAKE "Enable fix for FindBoost.cmake"
 %{_cmake} .. \
+%if 0%{?rhel} == 6
+	-DBoost_NO_BOOST_CMAKE=ON \
+%endif
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DBUILD_STATIC_LIBRARIES=ON \
 	-DCLUCENE_BUILD_SHARED_LIBRARIES=ON \
@@ -126,6 +133,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Mon Nov 10 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141110-1
+- Update version 2.1.14git20141110
 * Wed Nov 5 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141105-1
 - Update version 2.1.14git20141105
 * Fri Oct 17 2014 mosquito <sensor.wen@gmail.com> - 2.1.14git20141017-1
