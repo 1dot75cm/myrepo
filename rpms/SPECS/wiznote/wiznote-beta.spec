@@ -10,7 +10,7 @@
 %endif
 
 Name:		wiznote-beta
-Version:	2.1.15git20150109
+Version:	2.1.15git20150115
 Release:	1%{?dist}
 Summary:	WizNote QT Client
 Summary(zh_CN):	为知笔记 Qt 客户端
@@ -19,7 +19,6 @@ Group:		Applications/Editors
 License:	GPLv3
 URL:		https://github.com/WizTeam/WizQTClient
 Source:		%{name}-%{version}.tar.xz
-Patch0:		wiznote-beta_ClipboardData.patch
 
 BuildRequires:	gcc-c++
 BuildRequires:	qt5-qtbase-devel
@@ -50,7 +49,6 @@ This is a development version.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 # change library path
@@ -148,6 +146,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #@exclude @{_datadir}/licenses/
 
 %changelog
+* Thu Jan 15 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150115-1
+- Update version to 2.1.15git20150115
 * Mon Jan 12 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150109-1
 - Update version to 2.1.15git20150109
 * Wed Jan 07 2015 mosquito <sensor.wen@gmail.com> - 2.1.15git20150106-1
