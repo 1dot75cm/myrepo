@@ -8,8 +8,8 @@
 %endif
 
 Name:		wiz-note
-Version:	2.1.13git20140923
-Release:	2%{?dist}
+Version:	2.1.13git20140926
+Release:	1%{?dist}
 Summary:	WizNote QT Client
 Group:		Applications/Editors
 License:	GPLv3
@@ -66,6 +66,8 @@ rm -rf %{buildroot}%{_datadir}/icons/hicolor/{512x512,8x8}
 #%exclude %{_datadir}/licenses/
 
 %changelog
+* Sat Sep 27 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140926-1
+- update version 2.1.13git20140926(PreRelease)
 * Tue Sep 23 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140923-2
 - Change script
 * Tue Sep 23 2014 mosquito <sensor.wen@gmail.com> - 2.1.13git20140923-1
